@@ -32,12 +32,8 @@ jobs:
     - name: Run Buildx (push image)      
       if: success()      
       run: |        
-<<<<<<< HEAD
         docker buildx build \
         --platform ${{ steps.prepare.outputs.docker_platform }} \
         --tag ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }} \
         --file ./Dockerfile \
         --output type=image,push=true .
-=======
-        docker buildx build \        --platform ${{ steps.prepare.outputs.docker_platform }} \        --tag ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }} \        --file ./Dockerfile \        --output type=image,push=true .
->>>>>>> dbf07df21ee0b9e5c6f86e8fb7b083a58d4d3cf0
